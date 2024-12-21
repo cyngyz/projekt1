@@ -1,0 +1,101 @@
+html {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-family: system-ui;
+  text-align: center;
+  color: orange;
+}
+
+#box {
+  width: 250px;
+  height: 750px;
+  border-radius: 125px;
+  overflow: hidden;
+  transform: scale(0.6);
+  box-shadow: 0px 0px 50px orange;
+}
+
+.layer {
+  width: 1000px;
+  height: 250px;
+  float: left;
+  outline: 1px solid #222;
+  --speed: 1s;
+}
+
+.layer:nth-child(odd) {
+  animation: spin var(--speed) linear infinite;
+}
+.layer:nth-child(even) {
+  animation: spin var(--speed) linear reverse infinite;
+}
+
+.piece {
+  width: 250px;
+  aspect-ratio: 1/1;
+  float: left;
+  background: url("https://img.freepik.com/free-vector/happy-halloween-character-collection_23-2148636622.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721779200&semt=ais_user");
+  background-size: 1000px 800px;
+}
+
+@keyframes spin {
+  100% {
+    transform: translateX(-750px);
+  }
+}
+
+.piece:nth-child(1),
+.piece:last-child {
+  /* 	background: red; */
+}
+.piece:nth-child(2) {
+  /* 	background: green; */
+}
+.piece:nth-child(3) {
+  /* 	background: blue; */
+}
+.lastpiece {
+  /* 	background: red; */
+}
+
+.layer:nth-child(1) .piece:nth-child(1),
+.layer:nth-child(1) .piece:nth-child(4) {
+  background-position: -10px -50px;
+}
+.layer:nth-child(2) .piece:nth-child(1),
+.layer:nth-child(2) .piece:nth-child(4) {
+  background-position: -10px -300px;
+}
+.layer:nth-child(3) .piece:nth-child(1),
+.layer:nth-child(3) .piece:nth-child(4) {
+  background-position: -10px -550px;
+}
+
+.layer:nth-child(1) .piece:nth-child(2) {
+  background-position: -250px -50px;
+}
+.layer:nth-child(2) .piece:nth-child(2) {
+  background-position: -250px -300px;
+}
+.layer:nth-child(3) .piece:nth-child(2) {
+  background-position: -250px -550px;
+}
+
+.layer:nth-child(1) .piece:nth-child(3) {
+  background-position: -500px -50px;
+}
+.layer:nth-child(2) .piece:nth-child(3) {
+  background-position: -500px -300px;
+}
+.layer:nth-child(3) .piece:nth-child(3) {
+  background-position: -500px -550px;
+}
