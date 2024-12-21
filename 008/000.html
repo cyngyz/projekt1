@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./hamburgers.css" />
+    <link rel="stylesheet" href="./000.css" />
+  </head>
+
+  <body class="container">
+    <header class="header">
+      <a href="" class="header__logo">
+        <h3>renty</h3>
+        <img src="./Group 1 (1).svg" alt="" />
+      </a>
+
+      <div class="nav-collapse">
+        <nav class="nav">
+          <a href="" class="nav__link">Home</a>
+          <a href="" class="nav__link">Venues</a>
+          <a href="" class="nav__link">Contact</a>
+          <a href="" class="nav__link">About Us</a>
+          <img src="./Rectangle 3.png" alt="" />
+        </nav>
+
+        <div class="header__buttons">
+          <a href="" class="btn">Sign In</a>
+          <a href="" class="btn btn-purple">Sign Up</a>
+        </div>
+      </div>
+
+      <button class="hamburger hamburger--collapse" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </header>
+  </body>
+  <script>
+    let hamburger = document.querySelector(".hamburger");
+    let navCollapse = document.querySelector(".nav-collapse");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("is-active");
+      navCollapse.classList.toggle("active");
+    });
+  </script>
+</html>
